@@ -3,7 +3,7 @@ const Web3 = require('web3')
 const {interface,bytecode} = require('./compile')
 
 const provider= new Hdwallet(
-    'foot alone excess taste very spot sister great lab loyal tell swift' , 'https://rinkeby.infura.io/v3/3bda343ec30a47649680701141762dca'
+    'foot alone....' , 'https://rinkeby....'
 )
 const web3 = new Web3(provider)
 
@@ -14,7 +14,7 @@ const deploy = async ()=>{
     console.log(bal)
     Inbox = await new web3.eth.Contract(interface) /// abi of contract
     .deploy({data: bytecode,arguments:["InitHello"]})
-    .send({from:accounts[0],gas:'10000000'})
+    .send({from:accounts[0],gas:'8000000'})
     // console.log(Inbox)
     console.log(`contract address: ${Inbox.options.address}`)
 }
